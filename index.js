@@ -6,7 +6,8 @@ const app = express();
 app.use(bodyParser.json());
 
 // Replace with your OpenAI API key
-const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+const OPENAI_API_KEY = "// Read OpenAI API key from environment variable
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // Webhook endpoint for Dialogflow
 app.post("/webhook", async (req, res) => {
